@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgTech - Cultivating the Future</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d493",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221c",
+                        "dark-surface": "#1A2E26", 
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .dark .glass-panel-dark {
+            background: rgba(16, 34, 28, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(16, 34, 28, 0) 0%, rgba(16, 34, 28, 0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111816] dark:text-white overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f0f4f3] dark:border-[#1E332A]">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">agriculture</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[#111816] dark:text-white">AgriTech</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200" href="#solutions">Solutions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200" href="#robotics">Robotics</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200" href="#mission">Mission</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200" href="#blog">Blog</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="hidden sm:flex items-center justify-center h-10 px-5 rounded-lg bg-[#f0f4f3] hover:bg-[#e0e6e4] dark:bg-[#1E332A] dark:hover:bg-[#2A453A] text-[#111816] dark:text-white text-sm font-bold transition-colors">
+                    Log In
+                </button>
+<button class="flex items-center justify-center h-10 px-5 rounded-lg bg-primary hover:bg-[#0fb881] text-[#10221c] text-sm font-bold shadow-lg shadow-primary/20 transition-all transform hover:scale-105">
+                    Get the App
+                </button>
+</div>
+</div>
+</div>
+</header>
+<section class="relative w-full h-[600px] lg:h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="High-tech drone hovering over a lush green farm field at sunrise" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy-ABpwMuWrcAoA5eIwWShfv3JXwUzMiiJDTujpWegToqgL4U5sT74dSOrc9XcBXuzaKUrzBqQI4xHHzOvdqutHuuaWNE7KD_JCHOTkuhuj7ZK2AKRTZqQIHUOCtzGT6D9iAWDqZkxkjQTjJlo_HlMLT0IZUHAfkopgDVKxFzHjCE9AwVXm_iTT8lRLryCcikwfstOcEcBwxUvblFA4Iyd49Pi3Onl9R2FHCPC6wm2dsbLCktJx9MyCbX_sWKcq9FacHAuLaPl0A');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-background-dark/40 to-transparent z-10"></div>
+<div class="relative z-20 w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 flex flex-col items-start gap-6">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+            Now Live: Version 3.0
+        </span>
+<h1 class="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight max-w-3xl">
+            Cultivating the <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#80ffdb]">Future of Farming</span>
+</h1>
+<p class="text-gray-200 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
+            Data-driven insights for today, autonomous robotics for tomorrow. Join the agricultural revolution with our smart mobile solutions and future-ready hardware.
+        </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="flex items-center gap-2 h-12 px-6 rounded-xl bg-primary hover:bg-[#0fb881] text-[#10221c] text-base font-bold shadow-xl shadow-primary/20 transition-all transform hover:-translate-y-1">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                Get the App
+            </button>
+<button class="flex items-center gap-2 h-12 px-6 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-base font-bold transition-all">
+                Explore Our Vision
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<div class="relative z-20 -mt-10 w-full px-4 sm:px-6 lg:px-8 pointer-events-none">
+<div class="max-w-[1000px] mx-auto glass-panel dark:glass-panel-dark rounded-2xl p-6 shadow-xl grid grid-cols-2 md:grid-cols-4 gap-4 pointer-events-auto">
+<div class="flex flex-col items-center justify-center text-center border-r border-gray-200 dark:border-white/10 last:border-0">
+<span class="text-3xl font-bold text-[#111816] dark:text-white">50k+</span>
+<span class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Acres Monitored</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center border-r border-gray-200 dark:border-white/10 last:border-0 md:border-r">
+<span class="text-3xl font-bold text-[#111816] dark:text-white">98%</span>
+<span class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Disease Detection</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center border-r border-gray-200 dark:border-white/10 last:border-0">
+<span class="text-3xl font-bold text-[#111816] dark:text-white">24/7</span>
+<span class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">AI Analysis</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center last:border-0">
+<span class="text-3xl font-bold text-[#111816] dark:text-white">15%</span>
+<span class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Yield Increase</span>
+</div>
+</div>
+</div>
+<section class="py-20 lg:py-32 w-full bg-background-light dark:bg-background-dark" id="solutions">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="flex-1 flex flex-col gap-10">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold uppercase tracking-wider text-sm">Current Mobile Solutions</span>
+<h2 class="text-[#111816] dark:text-white text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                        Smart Farming in Your Pocket
+                    </h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed max-w-xl">
+                        Our mobile platform empowers farmers with real-time data and AI-driven insights. Make informed decisions instantly, from anywhere in the field.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-[#1E332A] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-[#2A453A]">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-[#10221c] transition-colors text-primary">
+<span class="material-symbols-outlined">compost</span>
+</div>
+<h3 class="text-lg font-bold text-[#111816] dark:text-white mb-2">Soil Health</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Real-time nutrient tracking and pH balancing advice via connected sensors.</p>
+</div>
+<div class="bg-white dark:bg-[#1E332A] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-[#2A453A]">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-[#10221c] transition-colors text-primary">
+<span class="material-symbols-outlined">pest_control</span>
+</div>
+<h3 class="text-lg font-bold text-[#111816] dark:text-white mb-2">AI Weed Detection</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Pinpoint invasive species with computer vision instantly.</p>
+</div>
+<div class="bg-white dark:bg-[#1E332A] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-[#2A453A]">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-[#10221c] transition-colors text-primary">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<h3 class="text-lg font-bold text-[#111816] dark:text-white mb-2">Disease Diagnosis</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Identify crop ailments instantly via camera photo analysis.</p>
+</div>
+<div class="bg-white dark:bg-[#1E332A] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-[#2A453A]">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-[#10221c] transition-colors text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="text-lg font-bold text-[#111816] dark:text-white mb-2">Market Analytics</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Track global commodity prices and trends to optimize sales.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 flex justify-center lg:justify-end relative">
+<div class="flex flex-col items-center gap-8 relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl opacity-60"></div>
+<div class="relative z-10 bg-[#111816] p-3 rounded-[3rem] shadow-2xl border-4 border-[#2A453A]">
+<div class="rounded-[2.5rem] overflow-hidden w-[300px] h-[600px] bg-white relative">
+<div class="bg-primary h-32 p-6 flex flex-col justify-end">
+<p class="text-[#10221c] font-bold text-xl">My Farm</p>
+<p class="text-[#10221c]/80 text-sm">Sunny, 72°F</p>
+</div>
+<div class="p-4 flex flex-col gap-4">
+<div class="bg-gray-50 p-4 rounded-xl flex items-center gap-3 shadow-sm">
+<div class="size-10 rounded-full bg-green-100 flex items-center justify-center text-green-700">
+<span class="material-symbols-outlined text-sm">water_drop</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase">Soil Moisture</p>
+<p class="text-gray-800 font-bold">Optimal (65%)</p>
+</div>
+</div>
+<div class="h-40 w-full bg-gray-100 rounded-xl bg-cover bg-center" data-alt="Satellite view of farm field showing crop health map" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBImfQsOqwDqzJ4lvm5UUy6HESJlISZ4s34kVBv9RgpqT791PAg-xccqdQCjMIdI0n6rOP66JhuVMnKg4p_rVlD7MOeLxFs9vrijQLikJv4h6TJ15FZJ65P9Wo9NTlsAaW-QAgwOqGMrkDI_M30ZO6vDb5dJwVE5g-dqKW7FwDyx9JNM___89sppWX0lsXroN0VuxyK54h_YKVO_hFOKTjq0l5RzP-MP-LLLvEEQGIlcvrN00rWRyZOl8RByN6oy5YhkcLQRoezwg');"></div>
+<div class="flex gap-2">
+<div class="bg-gray-50 p-4 rounded-xl flex-1 shadow-sm">
+<p class="text-xs text-gray-500 font-bold uppercase mb-1">Yield est.</p>
+<p class="text-gray-800 font-bold text-lg">+12%</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-xl flex-1 shadow-sm">
+<p class="text-xs text-gray-500 font-bold uppercase mb-1">Tasks</p>
+<p class="text-gray-800 font-bold text-lg">3 Pending</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 size-14 bg-primary rounded-full shadow-lg flex items-center justify-center text-[#10221c]">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 flex items-center justify-center gap-4 flex-wrap">
+<a class="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="#">
+<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.21-.93 3.57-.93 1.6 0 2.86.83 3.48 2.04-3.11 1.6-2.56 6.36.45 7.64-.52 1.34-1.29 2.65-2.58 3.48zm-4.71-15.6c.64-1.12 1.95-1.74 2.84-1.68.22 1.5-1.03 3.01-2.29 3.12-.76.08-1.95-.53-2.61-1.63.5-1.07 1.42-1.68 2.06-1.81z"></path></svg>
+<div class="flex flex-col items-start">
+<span class="text-[10px] uppercase font-medium leading-none opacity-80">Download on the</span>
+<span class="text-sm font-bold leading-tight mt-0.5">App Store</span>
+</div>
+</a>
+<a class="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="#">
+<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.006 1.006 0 0 1-1.61-.79V2.604a1.006 1.006 0 0 1 1.61-.79zm11.455 11.45L4.853 23.476a1.644 1.644 0 0 0 2.031-.192l8.18-8.02zm1.09-1.09l4.58-4.492c.67-.656.684-1.714.03-2.385l-.03-.027-4.58-4.492-5.71 5.71zM4.853.524l10.211 10.211L9.354 16.446 2.822.923A1.644 1.644 0 0 0 4.853.524z"></path></svg>
+<div class="flex flex-col items-start">
+<span class="text-[10px] uppercase font-medium leading-none opacity-80">Get it on</span>
+<span class="text-sm font-bold leading-tight mt-0.5">Google Play</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 lg:py-32 w-full bg-[#0B1713] relative overflow-hidden" id="robotics">
+<div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(#11d493 1px, transparent 1px); background-size: 30px 30px;">
+</div>
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-16">
+<span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Coming Soon</span>
+<h2 class="text-white text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-4">
+                Beyond the Screen: <br/> Autonomous Agriculture
+            </h2>
+<p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                The next generation of farming isn't just about reading data—it's about acting on it. Meet our upcoming fleet of autonomous guardians.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<div class="group relative bg-[#152620] border border-[#1E332A] rounded-3xl overflow-hidden hover:border-primary/50 transition-colors duration-300">
+<div class="aspect-video w-full bg-cover bg-center relative" data-alt="Futuristic autonomous tractor rover on soil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBodeKzmvtxeAlCd0IcDra56j_Ungt0V3_Jd8u92bGLjfjMdAXVn17wrm2AmlVxL8B7xnByu3kuT-CzO6BhTDrh7PlNZZrKyNfDW7H_cOnZ5PvQDJCuA-AvPwbX6AI1hE24tAHKYFNs-UYluJqf49P-MFfpK6ko03ak1CJ9El0Pa188OVqeq9qSYXXzT8ZJ5s4B-Yi7yclWc9y-9smYK8Aj3bJFb8PywgVO3fWiMJ343BJNQ5AzJi2PdRf42VRQQ3CYD9Dxx39N0g');">
+<div class="absolute inset-0 bg-gradient-to-t from-[#152620] to-transparent"></div>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-primary border border-primary/20">
+                        PROTOTYPE V2
+                     </div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">TerraBot</h3>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary transition-colors">precision_manufacturing</span>
+</div>
+<p class="text-gray-400 mb-6">Autonomous soil sampling and micro-weeding robot. Operates 24/7 with solar charging capabilities.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">LIDAR</span>
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">SOLAR</span>
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">AI NAV</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-[#152620] border border-[#1E332A] rounded-3xl overflow-hidden hover:border-primary/50 transition-colors duration-300">
+<div class="aspect-video w-full bg-cover bg-center relative" data-alt="Agricultural drone flying over crops scanning field" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANs-bSqB0ThcoPjB3GNO_RMD_puj63iMcMdnf-ciq4zEtHNTK9u2sQGDk9wDy5oioT8bYsLVTnlHjq-_QfhTx1Q0kVxn19pP5kWeWGb-XG5Mj3l4AmfCMG2j-zrlCD268LK1L2TC37xvF6phixUqNxcg3-cdPFnucTirFIx260QcDIg6Q4Lwcey-XC047pV6DKApVUM1xT0jvhx6cQe96uo0s_ATkAXtszsSL7pQunPLYb43wagITzOAK-5weBkGlkxncWTNY0eA');">
+<div class="absolute inset-0 bg-gradient-to-t from-[#152620] to-transparent"></div>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-primary border border-primary/20">
+                        BETA TESTING
+                     </div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">SkyEye</h3>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary transition-colors">flight</span>
+</div>
+<p class="text-gray-400 mb-6">Aerial surveillance drone for rapid large-scale crop analysis and targeted micro-spraying.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">4K CAM</span>
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">THERMAL</span>
+<span class="px-3 py-1 rounded-md bg-[#1E332A] text-gray-300 text-xs font-bold">5G</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 w-full bg-white dark:bg-background-dark border-t border-gray-100 dark:border-[#1E332A]" id="mission">
+<div class="max-w-[960px] mx-auto px-4 sm:px-6 text-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-6">eco</span>
+<h2 class="text-3xl md:text-4xl font-bold text-[#111816] dark:text-white mb-6 leading-tight">
+            "Empowering farmers to feed the world with less impact and more intelligence."
+        </h2>
+<p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+            We believe that the intersection of nature and technology holds the key to sustainable agriculture. Our team of agronomists and engineers work daily to bridge this gap.
+        </p>
+<div class="flex justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="h-8 w-24 bg-gray-300 dark:bg-gray-700 rounded" data-alt="Partner logo placeholder"></div>
+<div class="h-8 w-24 bg-gray-300 dark:bg-gray-700 rounded" data-alt="Partner logo placeholder"></div>
+<div class="h-8 w-24 bg-gray-300 dark:bg-gray-700 rounded" data-alt="Partner logo placeholder"></div>
+<div class="h-8 w-24 bg-gray-300 dark:bg-gray-700 rounded" data-alt="Partner logo placeholder"></div>
+</div>
+</div>
+</section>
+<footer class="bg-[#f0f4f3] dark:bg-[#0d1c17] py-16">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<div class="col-span-1 lg:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-2xl">agriculture</span>
+</div>
+<h2 class="text-lg font-bold text-[#111816] dark:text-white">AgriTech</h2>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-6">
+                    Cultivating a smarter future for agriculture through data and robotics.
+                </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#111816] dark:text-white mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Mobile App</a></li>
+<li><a class="hover:text-primary" href="#">Sensors</a></li>
+<li><a class="hover:text-primary" href="#">Robotics</a></li>
+<li><a class="hover:text-primary" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#111816] dark:text-white mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1 lg:col-span-1">
+<h4 class="font-bold text-[#111816] dark:text-white mb-4">Farm Insights</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Get the latest AgTech news delivered weekly.</p>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-4 pr-12 rounded-xl bg-white dark:bg-[#152620] border border-gray-200 dark:border-[#1E332A] focus:outline-none focus:ring-2 focus:ring-primary text-sm" placeholder="Enter your email" type="email"/>
+<button class="absolute right-1 top-1 h-10 w-10 bg-primary rounded-lg flex items-center justify-center text-[#10221c] hover:bg-[#0fb881] transition-colors">
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-200 dark:border-[#1E332A] flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400">© 2024 AgriTech Inc. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-gray-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body></html>
