@@ -11,6 +11,7 @@ function ContactForm() {
 
   const [status, setStatus] = useState('')
   const [errors, setErrors] = useState({})
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || ''
 
   // List of known email providers
   const knownEmailDomains = [
@@ -73,7 +74,7 @@ function ContactForm() {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (!validateForm()) {
@@ -84,10 +85,26 @@ function ContactForm() {
 
     setStatus('loading')
 
-    // Simulate form submission (frontend only)
-    setTimeout(() => {
-      console.log('Form data:', formData)
-      
+    try {
+      const endpoint = apiBaseUrl ? `${apiBaseUrl}/api/contact` : '/api/contact'
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null)
+        if (payload?.errors) {
+          setErrors(payload.errors)
+        }
+        setStatus('error')
+        setTimeout(() => setStatus(''), 3000)
+        return
+      }
+
       setFormData({
         fullName: '',
         email: '',
@@ -95,9 +112,13 @@ function ContactForm() {
         address: '',
         query: ''
       })
+      setErrors({})
       setStatus('success')
       setTimeout(() => setStatus(''), 3000)
-    }, 1000)
+    } catch (error) {
+      setStatus('error')
+      setTimeout(() => setStatus(''), 3000)
+    }
   }
 
   return (
