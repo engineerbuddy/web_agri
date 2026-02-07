@@ -1,1 +1,20 @@
-{\n  \"name\": \"your-package-name\",\n  \"version\": \"1.0.0\",\n  \"dependencies\": {\n    \"mongodb\": \"6.3.0\"\n  }\n}
+{
+  "name": "agribotics-webapp",
+  "version": "1.0.0",
+  "description": "AgriBotics - Cultivating the Future of Farming",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.11"
+  }
+}
