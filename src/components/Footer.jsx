@@ -22,13 +22,15 @@ function Footer() {
       name: 'Sagar Kumar Chaudhary',
       title: 'CTO',
       background: '',
-      icon: 'engineering'
+      icon: 'engineering',
+      linkedin: 'https://www.linkedin.com/in/sagar-k-chaudhary-5a1203299/'
     },
     {
       name: 'Adarsh Bhagat',
       title: 'CEO',
       background: '',
-      icon: 'person'
+      icon: 'person',
+      linkedin: 'https://www.linkedin.com/in/adarsh-bhagat-144ba2294/'
     }
   ]
 
