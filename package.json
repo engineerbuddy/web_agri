@@ -1,20 +1,15 @@
 {
-  "name": "agribotics-webapp",
+  "name": "your-package-name",
   "version": "1.0.0",
-  "description": "AgriBotics - Cultivating the Future of Farming",
-  "type": "module",
+  "description": "Your package description",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo 'Error: no test specified' && exit 1"
   },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.26.2"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.11"
+    "mongodb": "^6.3.0"
   }
 }
