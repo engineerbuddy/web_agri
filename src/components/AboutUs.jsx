@@ -29,9 +29,10 @@ function AboutUs() {
   const founders = [
     {
       name: 'Sagar Kumar Chaudhary',
-      title: 'Co-Founder',
+      title: 'CTO',
       background: '',
-      icon: 'engineering'
+      icon: 'engineering',
+      image: '/images/sagar-kumar-chaudhary.jpg'
     },
     {
       name: 'Adarsh Bhagat',
@@ -277,8 +278,12 @@ function AboutUs() {
             {founders.map((founder, index) => (
               <div key={index} className="bg-white dark:bg-[#1E332A] p-6 rounded-2xl border-2 border-gray-100 dark:border-[#2A453A] hover:shadow-xl dark:hover:shadow-xl hover:border-primary dark:hover:border-primary transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined text-3xl">{founder.icon}</span>
+                  <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary overflow-hidden">
+                    {founder.image ? (
+                      <img src={founder.image} alt={founder.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="material-symbols-outlined text-3xl">{founder.icon}</span>
+                    )}
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-[#111816] dark:text-white">{founder.name}</h4>

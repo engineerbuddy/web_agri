@@ -20,7 +20,7 @@ function Footer() {
   const founders = [
     {
       name: 'Sagar Kumar Chaudhary',
-      title: 'Co-Founder',
+      title: 'CTO',
       background: '',
       icon: 'engineering'
     },
