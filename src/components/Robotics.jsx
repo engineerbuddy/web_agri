@@ -2,7 +2,7 @@ function Robotics() {
   const robots = [
     {
       name: 'TerraBot',
-      status: 'PROTOTYPE V2',
+      status: '',
       icon: 'precision_manufacturing',
       description: 'Autonomous soil sampling and micro-weeding robot. Operates 24/7 with solar charging capabilities.',
       tags: ['LIDAR', 'SOLAR', 'AI NAV'],
@@ -10,7 +10,7 @@ function Robotics() {
     },
     {
       name: 'SkyEye',
-      status: 'BETA TESTING',
+      status: '',
       icon: 'flight',
       description: 'Aerial surveillance drone for rapid large-scale crop analysis and targeted micro-spraying.',
       tags: ['4K CAM', 'THERMAL', '5G'],
@@ -47,9 +47,6 @@ function Robotics() {
                 style={{ backgroundImage: `url('${robot.image}')` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-[#152620] to-transparent" />
-                <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono text-primary border border-primary/20">
-                  {robot.status}
-                </div>
               </div>
               
               <div className="p-8">

@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Header({ darkMode, toggleDarkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleGetApp = () => {
     scrollToSection('app-downloads')
@@ -9,6 +12,11 @@ function Header({ darkMode, toggleDarkMode }) {
   }
 
   const scrollToSection = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate(`/?section=${sectionId}`)
+      setMobileMenuOpen(false)
+      return
+    }
     const element = document.getElementById(sectionId)
     if (element) {
       const headerOffset = 80
@@ -48,9 +56,9 @@ function Header({ darkMode, toggleDarkMode }) {
               <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200">
                 Contact
               </button>
-              <button onClick={() => scrollToSection('blog')} className="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200">
-                Blog
-              </button>
+              <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors text-[#111816] dark:text-gray-200">
+                About Us
+              </Link>
             </nav>
             
             <div className="flex items-center gap-3">
@@ -114,9 +122,9 @@ function Header({ darkMode, toggleDarkMode }) {
                 <button onClick={() => scrollToSection('contact')} className="text-lg font-medium hover:text-primary transition-colors text-left text-[#111816] dark:text-gray-200">
                   Contact
                 </button>
-                <button onClick={() => scrollToSection('blog')} className="text-lg font-medium hover:text-primary transition-colors text-left text-[#111816] dark:text-gray-200">
-                  Blog
-                </button>
+                <Link to="/about" className="text-lg font-medium hover:text-primary transition-colors text-left text-[#111816] dark:text-gray-200">
+                  About Us
+                </Link>
               </nav>
               
               <div className="mt-8 flex flex-col gap-3">

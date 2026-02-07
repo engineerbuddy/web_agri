@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 function Solutions() {
   const [hoveredCard, setHoveredCard] = useState(null)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [showComingSoon, setShowComingSoon] = useState(false)
 
   const phoneSlides = [
     {
@@ -60,6 +61,12 @@ function Solutions() {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + phoneSlides.length) % phoneSlides.length)
+  }
+
+  const handleStoreClick = (e) => {
+    e.preventDefault()
+    setShowComingSoon(true)
+    setTimeout(() => setShowComingSoon(false), 3000)
   }
 
   const currentData = phoneSlides[currentSlide]
@@ -197,7 +204,7 @@ function Solutions() {
               </div>
               
               <div id="app-downloads" className="relative z-10 flex items-center justify-center gap-4 flex-wrap">
-                <a className="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                <button onClick={handleStoreClick} className="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.21-.93 3.57-.93 1.6 0 2.86.83 3.48 2.04-3.11 1.6-2.56 6.36.45 7.64-.52 1.34-1.29 2.65-2.58 3.48zm-4.71-15.6c.64-1.12 1.95-1.74 2.84-1.68.22 1.5-1.03 3.01-2.29 3.12-.76.08-1.95-.53-2.61-1.63.5-1.07 1.42-1.68 2.06-1.81z"/>
                   </svg>
@@ -205,9 +212,9 @@ function Solutions() {
                     <span className="text-[10px] uppercase font-medium leading-none opacity-80">Download on the</span>
                     <span className="text-sm font-bold leading-tight mt-0.5">App Store</span>
                   </div>
-                </a>
+                </button>
                 
-                <a className="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+                <button onClick={handleStoreClick} className="flex items-center gap-3 bg-black hover:bg-gray-900 text-white px-4 py-2.5 rounded-xl border border-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.609 1.814L13.792 12 3.61 22.186a1.006 1.006 0 0 1-1.61-.79V2.604a1.006 1.006 0 0 1 1.61-.79zm11.455 11.45L4.853 23.476a1.644 1.644 0 0 0 2.031-.192l8.18-8.02zm1.09-1.09l4.58-4.492c.67-.656.684-1.714.03-2.385l-.03-.027-4.58-4.492-5.71 5.71zM4.853.524l10.211 10.211L9.354 16.446 2.822.923A1.644 1.644 0 0 0 4.853.524z"/>
                   </svg>
@@ -215,12 +222,22 @@ function Solutions() {
                     <span className="text-[10px] uppercase font-medium leading-none opacity-80">Get it on</span>
                     <span className="text-sm font-bold leading-tight mt-0.5">Google Play</span>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Coming Soon Toast */}
+      {showComingSoon && (
+        <div className="fixed top-20 right-4 z-50 px-6 py-4 rounded-xl shadow-lg backdrop-blur-md border bg-primary/90 border-primary text-[#10221c] transform transition-all duration-300 animate-fade-in">
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined">schedule</span>
+            <span>App coming soon! Stay tuned for updates.</span>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -12,6 +12,19 @@ function ContactForm() {
   const [status, setStatus] = useState('')
   const [errors, setErrors] = useState({})
 
+  // List of known email providers
+  const knownEmailDomains = [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'live.com',
+    'protonmail.com', 'pm.me', 'mail.com', 'icloud.com', 'aol.com',
+    'ymail.com', 'rocketmail.com', 'zoho.com', 'tutanota.com', 'cock.li',
+    'gmx.com', 'web.de', 'mailbox.org', 'posteo.de', 'proton.me'
+  ]
+
+  const isValidEmailDomain = (email) => {
+    const domain = email.split('@')[1]?.toLowerCase()
+    return domain && knownEmailDomains.includes(domain)
+  }
+
   const validateForm = () => {
     const newErrors = {}
 
@@ -23,6 +36,8 @@ function ContactForm() {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
+    } else if (!isValidEmailDomain(formData.email)) {
+      newErrors.email = 'Please use a known email provider (Gmail, Yahoo, Outlook, etc.)'
     }
 
     if (!formData.contactNo.trim()) {
@@ -58,7 +73,7 @@ function ContactForm() {
     }
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     if (!validateForm()) {
@@ -69,19 +84,10 @@ function ContactForm() {
 
     setStatus('loading')
 
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
-
+    // Simulate form submission (frontend only)
+    setTimeout(() => {
+      console.log('Form data:', formData)
+      
       setFormData({
         fullName: '',
         email: '',
@@ -91,11 +97,7 @@ function ContactForm() {
       })
       setStatus('success')
       setTimeout(() => setStatus(''), 3000)
-    } catch (error) {
-      console.error('Error:', error)
-      setStatus('error')
-      setTimeout(() => setStatus(''), 3000)
-    }
+    }, 1000)
   }
 
   return (
