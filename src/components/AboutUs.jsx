@@ -36,9 +36,10 @@ function AboutUs() {
     },
     {
       name: 'Adarsh Bhagat',
-      title: 'Co-Founder',
+      title: 'CEO',
       background: '',
-      icon: 'person'
+      icon: 'person',
+      image: '/images/adarsh-bhagat.jpg'
     }
   ]
 

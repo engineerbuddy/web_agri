@@ -26,7 +26,7 @@ function Footer() {
     },
     {
       name: 'Adarsh Bhagat',
-      title: 'Co-Founder',
+      title: 'CEO',
       background: '',
       icon: 'person'
     }
