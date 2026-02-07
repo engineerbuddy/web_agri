@@ -217,9 +217,9 @@ function AboutUs() {
         </div>
 
         {/* Company Details Section */}
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
+        <div className="mt-16 max-w-md mx-auto">
           {/* Company Info */}
-          <div className="lg:col-span-1 bg-[#f0f4f3] dark:bg-[#1E332A] rounded-2xl p-8">
+          <div className="bg-[#f0f4f3] dark:bg-[#1E332A] rounded-2xl p-8">
             <div className="flex items-center gap-2 mb-6">
               <div className="size-8 text-primary">
                 <span className="material-symbols-outlined text-3xl">agriculture</span>
@@ -247,29 +247,6 @@ function AboutUs() {
                   <p className="text-gray-500 dark:text-gray-400">{companyDetails.location}</p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Mission & Vision */}
-          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-[#1E332A] p-8 rounded-2xl border-2 border-gray-100 dark:border-[#2A453A] shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-3xl text-primary">target</span>
-                <h3 className="text-xl font-bold text-[#111816] dark:text-white">Our Mission</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                {companyDetails.mission}
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-[#1E332A] p-8 rounded-2xl border-2 border-gray-100 dark:border-[#2A453A] shadow-lg" id="vision">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-3xl text-primary">visibility</span>
-                <h3 className="text-xl font-bold text-[#111816] dark:text-white">Our Vision</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                {companyDetails.vision}
-              </p>
             </div>
           </div>
         </div>
