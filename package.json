@@ -1,15 +1,1 @@
-{
-  "name": "your-package-name",
-  "version": "1.0.0",
-  "description": "Your package description",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo 'Error: no test specified' && exit 1"
-  },
-  "keywords": [],
-  "author": "Your Name",
-  "license": "ISC",
-  "dependencies": {
-    "mongodb": "^6.3.0"
-  }
-}
+{\n  \"name\": \"your-package-name\",\n  \"version\": \"1.0.0\",\n  \"dependencies\": {\n    \"mongodb\": \"6.3.0\"\n  }\n}
