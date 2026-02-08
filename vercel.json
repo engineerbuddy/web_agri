@@ -1,1 +1,13 @@
-{"buildCommand":"npm run build","outputDirectory":"dist","devCommand":"npm run dev","framework":"vite","installCommand":"npm install","env":{"MONGODB_URI":"@mongodb_uri"}}
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
