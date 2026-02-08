@@ -33,6 +33,7 @@ function AboutUs() {
       background: '',
       icon: 'engineering',
       image: '/images/sagar-kumar-chaudhary.jpg',
+      email: 'sagarkumarchaaudhary27@gmail.com',
       linkedin: 'https://www.linkedin.com/in/sagar-k-chaudhary-5a1203299/'
     },
     {
@@ -41,6 +42,7 @@ function AboutUs() {
       background: '',
       icon: 'person',
       image: '/images/adarsh-bhagat.jpg',
+      email: 'adarshbhagat2426@gmail.com',
       linkedin: 'https://www.linkedin.com/in/adarsh-bhagat-144ba2294/'
     }
   ]
@@ -51,6 +53,28 @@ function AboutUs() {
     mission: 'Revolutionizing agriculture through intelligent automation and data-driven insights',
     vision: 'A world where technology empowers every farmer to achieve sustainable, profitable farming'
   }
+
+  const supportedBy = [
+    {
+      name: 'IIT Madras',
+      logo: '/images/iit_madras.png',
+      description: 'Indian Institute of Technology Madras',
+      website: 'https://www.iitm.ac.in/',
+      size: 'large'
+    },
+    {
+      name: 'School of Innovation & Entrepreneurship',
+      logo: '/images/photo_2026-02-08_21-31-24.jpg',
+      description: 'IIT Madras',
+      website: 'https://www.iitm.ac.in/'
+    },
+    {
+      name: 'Nirmaan',
+      logo: '/images/photo_2026-02-08_21-53-34.jpg',
+      description: 'Supporting Partner',
+      website: '#'
+    }
+  ]
 
   const timeline = [
     {
@@ -118,7 +142,7 @@ function AboutUs() {
           <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
             <div 
               className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAy-ABpwMuWrcAoA5eIwWShfv3JXwUzMiiJDTujpWegToqgL4U5sT74dSOrc9XcBXuzaKUrzBqQI4xHHzOvdqutHuuaWNE7KD_JCHOTkuhuj7ZK2AKRTZqQIHUOCtzGT6D9iAWDqZkxkjQTjJlo_HlMLT0IZUHAfkopgDVKxFzHjCE9AwVXm_iTT8lRLryCcikwfstOcEcBwxUvblFA4Iyd49Pi3Onl9R2FHCPC6wm2dsbLCktJx9MyCbX_sWKcq9FacHAuLaPl0A')" }}
+              style={{ backgroundImage: "url('/images/image_2026-02-08_22-06-24.png')" }}
             />
           </div>
         </div>
@@ -220,10 +244,8 @@ function AboutUs() {
         <div className="mt-16 max-w-md mx-auto">
           {/* Company Info */}
           <div className="bg-[#f0f4f3] dark:bg-[#1E332A] rounded-2xl p-8">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="size-8 text-primary">
-                <span className="material-symbols-outlined text-3xl">agriculture</span>
-              </div>
+            <div className="flex items-center gap-1 mb-6">
+              <img src="/images/apple-touch-icon.png" alt="AgriBotics Logo" className="h-16 w-16 object-contain" />
               <h2 className="text-2xl font-bold text-[#111816] dark:text-white">AgriBotics</h2>
             </div>
             
@@ -243,8 +265,29 @@ function AboutUs() {
               <div className="flex items-start gap-2">
                 <span className="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
                 <div className="text-sm">
-                  <p className="font-bold text-[#111816] dark:text-white">Headquarters</p>
+                  <p className="font-bold text-[#111816] dark:text-white">Headquarter</p>
                   <p className="text-gray-500 dark:text-gray-400">{companyDetails.location}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-sm mt-0.5">phone</span>
+                <div className="text-sm">
+                  <p className="font-bold text-[#111816] dark:text-white">Phone</p>
+                  <a href="tel:7232985976" className="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">7232985976</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-sm mt-0.5">mail</span>
+                <div className="text-sm">
+                  <p className="font-bold text-[#111816] dark:text-white">Email</p>
+                  <a href="mailto:office.agribotics@gmail.com" className="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">office.agribotics@gmail.com</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="material-symbols-outlined text-primary text-sm mt-0.5">share</span>
+                <div className="text-sm">
+                  <p className="font-bold text-[#111816] dark:text-white">LinkedIn</p>
+                  <a href="https://www.linkedin.com/company/agriboticss/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">Follow Us</a>
                 </div>
               </div>
             </div>
@@ -271,19 +314,31 @@ function AboutUs() {
                       <p className="text-xs font-bold text-primary uppercase tracking-wider">{founder.title}</p>
                     )}
                   </div>
-                  {founder.linkedin && (
-                    <a 
-                      href={founder.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-[#0fb881] transition-colors"
-                      aria-label={`${founder.name} LinkedIn Profile`}
-                    >
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {founder.email && (
+                      <a 
+                        href={`mailto:${founder.email}`}
+                        className="text-primary hover:text-[#0fb881] transition-colors"
+                        aria-label={`Email ${founder.name}`}
+                        title={founder.email}
+                      >
+                        <span className="material-symbols-outlined text-xl">mail</span>
+                      </a>
+                    )}
+                    {founder.linkedin && (
+                      <a 
+                        href={founder.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-[#0fb881] transition-colors"
+                        aria-label={`${founder.name} LinkedIn Profile`}
+                      >
+                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
                 {founder.background && (
                   <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -291,6 +346,36 @@ function AboutUs() {
                   </p>
                 )}
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Supported By Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#111816] dark:text-white mb-8 text-center">Supported By</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {supportedBy.map((supporter, index) => (
+              <a
+                key={index}
+                href={supporter.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white dark:bg-[#1E332A] p-6 rounded-2xl border-2 border-gray-100 dark:border-[#2A453A] hover:shadow-xl dark:hover:shadow-xl hover:border-primary dark:hover:border-primary transition-all group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className={`${supporter.size === 'large' ? 'w-24 h-24' : 'w-16 h-16'} flex-shrink-0 rounded-lg bg-primary/10 flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform`}>
+                    {supporter.logo ? (
+                      <img src={supporter.logo} alt={supporter.name} className="w-full h-full object-contain p-1" />
+                    ) : (
+                      <span className="material-symbols-outlined text-primary text-4xl">business</span>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-base text-[#111816] dark:text-white mb-1 group-hover:text-primary transition-colors">{supporter.name}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{supporter.description}</p>
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>

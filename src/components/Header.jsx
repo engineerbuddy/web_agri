@@ -36,10 +36,8 @@ function Header({ darkMode, toggleDarkMode }) {
       <header className="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f0f4f3] dark:border-[#1E332A]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2">
-              <div className="size-8 text-primary">
-                <span className="material-symbols-outlined text-3xl">agriculture</span>
-              </div>
+            <div className="flex items-center gap-1">
+              <img src="/images/apple-touch-icon.png" alt="AgriBotics Logo" className="h-20 w-20 object-contain" />
               <h2 className="text-xl font-bold tracking-tight text-[#111816] dark:text-white">AgriBotics</h2>
             </div>
             
@@ -69,10 +67,6 @@ function Header({ darkMode, toggleDarkMode }) {
                 <span className="material-symbols-outlined text-[#111816] dark:text-white">
                   {darkMode ? 'light_mode' : 'dark_mode'}
                 </span>
-              </button>
-              
-              <button className="hidden sm:flex items-center justify-center h-10 px-5 rounded-lg bg-[#f0f4f3] hover:bg-[#e0e6e4] dark:bg-[#1E332A] dark:hover:bg-[#2A453A] text-[#111816] dark:text-white text-sm font-bold transition-colors">
-                Log In
               </button>
               
               <button 

@@ -153,7 +153,7 @@ function ContactForm() {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Enter your full name"
                   className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-[#152620] border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.fullName 
                       ? 'border-red-500 dark:border-red-500' 
@@ -175,7 +175,7 @@ function ContactForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="you@example.com"
+                  placeholder="your.email@example.com"
                   className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-[#152620] border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.email 
                       ? 'border-red-500 dark:border-red-500' 
@@ -197,7 +197,7 @@ function ContactForm() {
                   name="contactNo"
                   value={formData.contactNo}
                   onChange={handleChange}
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="Enter your contact number"
                   className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-[#152620] border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.contactNo 
                       ? 'border-red-500 dark:border-red-500' 
@@ -219,7 +219,7 @@ function ContactForm() {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  placeholder="123 Farm Lane, Agricultural City, AC 12345"
+                  placeholder="City, State/Province"
                   className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-[#152620] border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
                     errors.address 
                       ? 'border-red-500 dark:border-red-500' 
@@ -240,7 +240,7 @@ function ContactForm() {
                   name="query"
                   value={formData.query}
                   onChange={handleChange}
-                  placeholder="Tell us about your agricultural needs and how we can help..."
+                  placeholder="Tell us about your inquiry or how we can assist you..."
                   rows="5"
                   className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-[#152620] border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary resize-none ${
                     errors.query 
