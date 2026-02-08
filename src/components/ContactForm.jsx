@@ -11,7 +11,6 @@ function ContactForm() {
 
   const [status, setStatus] = useState('')
   const [errors, setErrors] = useState({})
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || ''
 
   // List of known email providers
   const knownEmailDomains = [
@@ -86,36 +85,43 @@ function ContactForm() {
     setStatus('loading')
 
     try {
-      const endpoint = apiBaseUrl ? `${apiBaseUrl}/api/contact` : '/api/contact'
-      const response = await fetch(endpoint, {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.contactNo,
+          address: formData.address,
+          message: formData.query,
+          subject: 'New Contact Form Submission - AgriBotics Web',
+          from_name: 'AgriBotics Website',
+          to: import.meta.env.VITE_CONTACT_EMAIL
+        })
       })
 
-      if (!response.ok) {
-        const payload = await response.json().catch(() => null)
-        if (payload?.errors) {
-          setErrors(payload.errors)
-        }
-        setStatus('error')
-        setTimeout(() => setStatus(''), 3000)
-        return
+      const result = await response.json()
+
+      if (result.success) {
+        setFormData({
+          fullName: '',
+          email: '',
+          contactNo: '',
+          address: '',
+          query: ''
+        })
+        setErrors({})
+        setStatus('success')
+        setTimeout(() => setStatus(''), 5000)
+      } else {
+        throw new Error(result.message || 'Submission failed')
       }
-
-      setFormData({
-        fullName: '',
-        email: '',
-        contactNo: '',
-        address: '',
-        query: ''
-      })
-      setErrors({})
-      setStatus('success')
-      setTimeout(() => setStatus(''), 3000)
     } catch (error) {
+      console.error('Form submission error:', error)
       setStatus('error')
       setTimeout(() => setStatus(''), 3000)
     }

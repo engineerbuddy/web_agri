@@ -29,7 +29,7 @@ function AboutUs() {
   const founders = [
     {
       name: 'Sagar Kumar Chaudhary',
-      title: 'CTO',
+      title: 'Co-Founder & CTO',
       background: '',
       icon: 'engineering',
       image: '/images/sagar-kumar-chaudhary.jpg',
@@ -37,7 +37,7 @@ function AboutUs() {
     },
     {
       name: 'Adarsh Bhagat',
-      title: 'CEO',
+      title: 'Co-Founder & CEO',
       background: '',
       icon: 'person',
       image: '/images/adarsh-bhagat.jpg',
@@ -47,7 +47,7 @@ function AboutUs() {
 
   const companyDetails = {
     founded: '2025',
-    location: 'Gorakhpur, Uttar Pradesh',
+    location: 'Chennai, Tamil Nadu',
     mission: 'Revolutionizing agriculture through intelligent automation and data-driven insights',
     vision: 'A world where technology empowers every farmer to achieve sustainable, profitable farming'
   }
